@@ -1,7 +1,8 @@
 from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from database import create_db_and_tables
+from app.database import create_db_and_tables
+from app.model import User, Session  # noqa: F401 — registers tables with SQLModel metadata
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
