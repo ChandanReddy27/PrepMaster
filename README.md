@@ -21,8 +21,8 @@ docker compose up -d
 
 ```bash
 cd backend
-pip install -r requirements.txt
-uvicorn app.main:app --reload
+uv sync
+uv run uvicorn app.main:app --reload
 ```
 
 ### 4. Start the frontend
